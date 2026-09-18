@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="790" viewBox="0 0 1280 790" role="img" aria-labelledby="title desc">
+<title id="title">模型更新到策略发布验收流程</title>
+<desc id="desc">新模型先通过模型检查，冻结环境版本后回归或重训策略，再进行独立策略测试和部署一致性验证。任何失败均保留原结果，进入新开发轮；最终测试不得用于调参，发布候选不代表获准上机。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#526c80"/></marker></defs>
+<rect width="1280" height="790" fill="#f5f8fc"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<text x="32" y="50" font-size="29" fill="#152d45" font-weight="700">图 6-3  模型更新到策略发布：两道验收，一条证据链</text>
+<text x="32" y="86" font-size="19" fill="#526c80" font-weight="400">先冻结模型版本，再评估策略；最终测试不用于调参，旧策略的通过记录不跨模型继承。</text>
+<rect x="32" y="115" width="592" height="40" rx="14" fill="#e8f2fd" stroke="none"/>
+<text x="48" y="142" font-size="19" fill="#1768b3" font-weight="700">模型证据：仿真正确性与真实数据校准分开记录</text>
+<rect x="656" y="115" width="592" height="40" rx="14" fill="#e5f4ef" stroke="none"/>
+<text x="672" y="142" font-size="19" fill="#087c70" font-weight="700">策略证据：开发 → 独立测试 → 部署复核</text>
+<rect x="32" y="175" width="176" height="142" rx="14" fill="#e8f2fd" stroke="#1768b3"/>
+<text x="44" y="205" font-size="16" fill="#1768b3" font-weight="700">01</text>
+<text x="44" y="237" font-size="19" fill="#1768b3" font-weight="700">新模型候选</text>
+<text x="44" y="269" font-size="15.5" fill="#18354e" font-weight="400">参数 / 残差 / 执行器</text>
+<text x="44" y="295" font-size="15.5" fill="#18354e" font-weight="400">明确数据用途与版本</text>
+<path d="M209 247 H233" fill="none" stroke="#526c80" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="240" y="175" width="176" height="142" rx="14" fill="#e8f2fd" stroke="#1768b3"/>
+<text x="252" y="205" font-size="16" fill="#1768b3" font-weight="700">02</text>
+<text x="252" y="237" font-size="19" fill="#1768b3" font-weight="700">模型验证</text>
+<text x="252" y="269" font-size="15.5" fill="#18354e" font-weight="400">物理、数值、留出误差</text>
+<text x="252" y="295" font-size="15.5" fill="#18354e" font-weight="400">真实数据路径才验 G3</text>
+<path d="M417 247 H441" fill="none" stroke="#526c80" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="448" y="175" width="176" height="142" rx="14" fill="#e8f2fd" stroke="#1768b3"/>
+<text x="460" y="205" font-size="16" fill="#1768b3" font-weight="700">03</text>
+<text x="460" y="237" font-size="19" fill="#1768b3" font-weight="700">冻结环境版本</text>
+<text x="460" y="269" font-size="15.5" fill="#18354e" font-weight="400">模型、时序、随机化</text>
+<text x="460" y="295" font-size="15.5" fill="#18354e" font-weight="400">绑定候选版本标识</text>
+<path d="M625 247 H649" fill="none" stroke="#526c80" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="656" y="175" width="176" height="142" rx="14" fill="#e5f4ef" stroke="#087c70"/>
+<text x="668" y="205" font-size="16" fill="#087c70" font-weight="700">04</text>
+<text x="668" y="237" font-size="19" fill="#087c70" font-weight="700">策略开发与回归</text>
+<text x="668" y="269" font-size="15.5" fill="#18354e" font-weight="400">旧策略回归后决定：</text>
+<text x="668" y="295" font-size="15.5" fill="#18354e" font-weight="400">保留、微调或重训</text>
+<path d="M833 247 H857" fill="none" stroke="#526c80" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="864" y="175" width="176" height="142" rx="14" fill="#e5f4ef" stroke="#087c70"/>
+<text x="876" y="205" font-size="16" fill="#087c70" font-weight="700">05</text>
+<text x="876" y="237" font-size="19" fill="#087c70" font-weight="700">独立策略测试</text>
+<text x="876" y="269" font-size="15.5" fill="#18354e" font-weight="400">冻结策略与归一化</text>
+<text x="876" y="295" font-size="15.5" fill="#18354e" font-weight="400">留出场景、多种子</text>
+<path d="M1041 247 H1065" fill="none" stroke="#526c80" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="1072" y="175" width="176" height="142" rx="14" fill="#f0eafa" stroke="#7254a8"/>
+<text x="1084" y="205" font-size="16" fill="#7254a8" font-weight="700">06</text>
+<text x="1084" y="237" font-size="19" fill="#7254a8" font-weight="700">部署一致性</text>
+<text x="1084" y="269" font-size="15.5" fill="#18354e" font-weight="400">导出、闭环、故障注入</text>
+<text x="1084" y="295" font-size="15.5" fill="#18354e" font-weight="400">按目标平台重新验收</text>
+<rect x="32" y="346" width="592" height="83" rx="14" fill="#fff1d8" stroke="#9b6514"/>
+<text x="50" y="377" font-size="22" fill="#9b6514" font-weight="700">模型通过 ≠ 策略通过</text>
+<text x="50" y="407" font-size="18" fill="#18354e" font-weight="400">更换动力学后，重新建立该版本上的策略表现与安全证据。</text>
+<path d="M1160 318 V339" fill="none" stroke="#526c80" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="656" y="346" width="592" height="83" rx="14" fill="#e5f4ef" stroke="#087c70"/>
+<text x="674" y="377" font-size="22" fill="#087c70" font-weight="700">版本绑定的发布候选</text>
+<text x="674" y="407" font-size="18" fill="#18354e" font-weight="400">模型 + 策略 + 观测/动作契约 + 运行配置 + 验收报告</text>
+<text x="32" y="473" font-size="23" fill="#152d45" font-weight="700">未通过时：保留证据，回到对应开发环节</text>
+<rect x="32" y="493" width="384" height="119" rx="14" fill="#e8f2fd" stroke="#1768b3"/>
+<text x="48" y="525" font-size="22" fill="#1768b3" font-weight="700">模型检查失败</text>
+<text x="48" y="560" font-size="17" fill="#18354e" font-weight="400">检查数据、结构、约束与数值实现。</text>
+<text x="48" y="590" font-size="17" fill="#18354e" font-weight="400">新模型重做检查，不跳到策略发布。</text>
+<rect x="448" y="493" width="384" height="119" rx="14" fill="#fff1d8" stroke="#9b6514"/>
+<text x="464" y="525" font-size="22" fill="#9b6514" font-weight="700">策略测试失败</text>
+<text x="464" y="560" font-size="17" fill="#18354e" font-weight="400">保留失败结果，开启下一开发轮。</text>
+<text x="464" y="590" font-size="17" fill="#18354e" font-weight="400">旧测试转开发，新留出只作验收。</text>
+<rect x="864" y="493" width="384" height="119" rx="14" fill="#f0eafa" stroke="#7254a8"/>
+<text x="880" y="525" font-size="22" fill="#7254a8" font-weight="700">部署复核失败</text>
+<text x="880" y="560" font-size="17" fill="#18354e" font-weight="400">修正适配器、时序、映射或保护配置。</text>
+<text x="880" y="590" font-size="17" fill="#18354e" font-weight="400">重做一致性与受影响的策略回归。</text>
+<rect x="32" y="636" width="1216" height="103" rx="14" fill="#ffffff" stroke="#aac0d1"/>
+<text x="50" y="667" font-size="21" fill="#152d45" font-weight="700">验收记录至少包含</text>
+<text x="260" y="667" font-size="19" fill="#18354e" font-weight="400">模型/策略版本、测试集标识、随机种子、指标与失败轨迹、未关闭问题</text>
+<text x="50" y="704" font-size="19" fill="#9b6514" font-weight="700">边界：仿真、软件在环和 sim-to-sim 通过，都不等于实船或真实机器人获准运行。</text>
+<text x="32" y="768" font-size="15" fill="#526c80" font-weight="400">SHIP → HUMANOID  /  实施计划 v0.3  /  G3 仅用于真实数据校准路径；发布仍受平台安全门槛约束</text>
+</g>
+</svg>

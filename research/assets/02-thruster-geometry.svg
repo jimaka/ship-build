@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="830" viewBox="0 0 1280 830" role="img" aria-labelledby="title desc">
+<title id="title">图 2-1 双推进器安装坐标、力方向与艏摇力矩</title>
+<desc id="desc">船体系 x 向艏、y 向右舷、z 向下。两推进器位于艉部，同一纵向位置，分别在右舷与左舷。图示等推力镜像倾转，横向分力与艏摇力矩抵消，只留下纵向合力；同向横推则产生与横向力耦合的艏摇力矩。</desc>
+<defs><marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#1768b3"/></marker><marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#087c70"/></marker><marker id="gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#526c80"/></marker></defs>
+<rect width="1280" height="830" fill="#f5f8fc"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect width="1280" height="106" rx="20" fill="#152d45"/>
+<text x="32" y="46" font-size="29" fill="#ffffff" font-weight="700">图 2-1  双推进器几何：先算合力与力矩，再命名机动</text>
+<text x="32" y="82" font-size="19" fill="#c4d8e8">仅为符号与对称布局示意；实际安装位置、推力映射和传感器零位需逐机核实。</text>
+<rect x="32" y="128" width="560" height="548" rx="16" fill="#ffffff" stroke="#aac0d1"/>
+<text x="52" y="161" font-size="21" fill="#152d45" font-weight="700">俯视图 · 等推力镜像倾转</text>
+<path d="M285 187 Q380 226 410 322 L410 597 Q285 647 160 597 L160 322 Q190 226 285 187 Z" fill="#edf4fa" stroke="#aac0d1" stroke-width="2"/>
+<path d="M285 616 V231" fill="none" stroke="#526c80" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#gray)"/>
+<path d="M85 370 H503" fill="none" stroke="#526c80" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#gray)"/>
+<text x="303" y="243" font-size="20" fill="#526c80">+x 艏向</text>
+<text x="438" y="351" font-size="20" fill="#526c80">+y 右舷</text>
+<circle cx="285" cy="370" r="5" fill="#152d45"/>
+<text x="302" y="397" font-size="18" fill="#152d45">O：力矩参考点</text>
+<path d="M185 530 H385" stroke="#aac0d1" stroke-width="1.5" stroke-dasharray="5 4"/>
+<path d="M385 370 V530 M185 370 V530" stroke="#aac0d1" stroke-width="1.5" stroke-dasharray="5 4"/>
+<circle cx="385" cy="530" r="18" fill="#e8f2fd" stroke="#1768b3" stroke-width="2"/>
+<circle cx="185" cy="530" r="18" fill="#e5f4ef" stroke="#087c70" stroke-width="2"/>
+<path d="M385 530 L438 437" stroke="#1768b3" stroke-width="4" marker-end="url(#blue)"/>
+<path d="M185 530 L132 437" stroke="#087c70" stroke-width="4" marker-end="url(#teal)"/>
+<text x="404" y="425" font-size="19" fill="#1768b3" font-weight="700">θ₁ = +β</text>
+<text x="73" y="425" font-size="19" fill="#087c70" font-weight="700">θ₂ = −β</text>
+<text x="349" y="573" font-size="18" fill="#1768b3" font-weight="700">1：(xₚ, +d)</text>
+<text x="128" y="573" font-size="18" fill="#087c70" font-weight="700">2：(xₚ, −d)</text>
+<text x="233" y="602" font-size="18" fill="#526c80">xₚ &lt; 0</text>
+<text x="52" y="653" font-size="18" fill="#526c80">z 向下；正艏摇为俯视顺时针（右转）。</text>
+<rect x="616" y="128" width="632" height="170" rx="16" fill="#e8f2fd" stroke="#1768b3"/>
+<text x="637" y="163" font-size="22" fill="#1768b3" font-weight="700">统一作用力公式</text>
+<text x="637" y="199" font-size="21" fill="#18354e">Xᵢ = Tᵢ cosθᵢ − Sᵢ sinθᵢ</text>
+<text x="637" y="231" font-size="21" fill="#18354e">Yᵢ = Tᵢ sinθᵢ + Sᵢ cosθᵢ</text>
+<text x="637" y="273" font-size="24" fill="#1768b3" font-weight="700">N = Σ (xᵢYᵢ − yᵢXᵢ)</text>
+<text x="617" y="331" font-size="18" fill="#526c80">下例仅计推进作用，假设 Sᵢ = 0、等幅 T &gt; 0。</text>
+<rect x="616" y="346" width="632" height="99" rx="14" fill="#e5f4ef" stroke="#087c70"/>
+<text x="636" y="380" font-size="21" fill="#087c70" font-weight="700">① 镜像角 ±β：不是纯艏摇</text>
+<text x="636" y="420" font-size="21" fill="#18354e">X = 2T cosβ，Y = 0，N = 0</text>
+<rect x="616" y="461" width="632" height="99" rx="14" fill="#fff1d8" stroke="#9b6514"/>
+<text x="636" y="495" font-size="21" fill="#9b6514" font-weight="700">② 同向横推 +90°：横向力与艏摇耦合</text>
+<text x="636" y="535" font-size="21" fill="#18354e">X = 0，Y = 2T，N = 2xₚT = xₚY</text>
+<rect x="616" y="576" width="632" height="100" rx="14" fill="#f0eafa" stroke="#7254a8"/>
+<text x="636" y="610" font-size="21" fill="#7254a8" font-weight="700">③ 轴向反向力偶：先确认执行器可实现</text>
+<text x="636" y="649" font-size="20" fill="#18354e">F₁ = (T, 0)，F₂ = (−T, 0) ⇒ N = −2dT</text>
+<rect x="32" y="699" width="1216" height="87" rx="14" fill="#ffffff" stroke="#aac0d1"/>
+<text x="52" y="732" font-size="20" fill="#152d45" font-weight="700">“纯合力/纯力矩”不等于“纯运动”：惯性耦合、水动力、流与执行器瞬态仍影响轨迹。</text>
+<text x="52" y="765" font-size="18" fill="#526c80">反馈角先经 θᵢ = sᵢ (αᵢ − α₀ᵢ) 转换；镜像角与等转速也不能保证实船两机等推力。</text>
+<text x="32" y="815" font-size="15" fill="#526c80">文档复查 2026-09-16  /  坐标与代数示意，不代表本船尺寸、实测受力或机动放行结论</text>
+</g>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="846" viewBox="0 0 1280 846" role="img" aria-labelledby="title desc">
+<title id="title">图 6-2  训练与部署共用架构：策略、执行器与监督分层</title>
+<desc id="desc">训练侧依次批量采样、PPO更新、冻结发布与导出一致性检查。部署侧观测输入冻结策略，经动作监督和切换后由底层伺服驱动受控对象并获得反馈。传统基线或保护在动作监督层进入。</desc>
+<defs>
+<marker id="arrow-1768b3" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0 L8 4 L0 8 Z" fill="#1768b3"/>
+</marker>
+<marker id="arrow-087c70" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0 L8 4 L0 8 Z" fill="#087c70"/>
+</marker>
+<marker id="arrow-9b6514" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0 L8 4 L0 8 Z" fill="#9b6514"/>
+</marker>
+<marker id="arrow-7254a8" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0 L8 4 L0 8 Z" fill="#7254a8"/>
+</marker>
+</defs>
+<rect width="1280" height="846" rx="22" fill="#f5f8fc"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="0" y="0" width="1280" height="106" rx="22" fill="#152d45"/>
+<text x="36" y="46" font-size="29" fill="#ffffff" font-weight="700" text-anchor="start">图 6-2  训练与部署共用架构：策略、执行器与监督分层</text>
+<text x="36" y="80" font-size="17" fill="#c6d9e8" font-weight="400" text-anchor="start">蓝色：训练与策略  ·  绿色：设备相关动力学与伺服  ·  橙色：基线、监督与保护</text>
+<text x="44" y="146" font-size="22" fill="#152d45" font-weight="700" text-anchor="start">训练侧：采样与参数更新</text>
+<rect x="44" y="169" width="266" height="111" rx="16" fill="#e8f2fd" stroke="#1768b3" stroke-width="1.3"/>
+<text x="62" y="203" font-size="22" fill="#1768b3" font-weight="700" text-anchor="start">批量环境采样</text>
+<text x="62" y="236" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">任务 / 执行器 / 扰动</text>
+<path d="M310 223 H355" stroke="#1768b3" stroke-width="2.4" fill="none" marker-end="url(#arrow-1768b3)"/>
+<rect x="360" y="169" width="266" height="111" rx="16" fill="#e8f2fd" stroke="#1768b3" stroke-width="1.3"/>
+<text x="378" y="203" font-size="22" fill="#1768b3" font-weight="700" text-anchor="start">PPO 更新</text>
+<text x="378" y="236" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">轨迹 / 优势 / 策略参数</text>
+<path d="M626 223 H671" stroke="#1768b3" stroke-width="2.4" fill="none" marker-end="url(#arrow-1768b3)"/>
+<rect x="676" y="169" width="266" height="111" rx="16" fill="#e8f2fd" stroke="#1768b3" stroke-width="1.3"/>
+<text x="694" y="203" font-size="22" fill="#1768b3" font-weight="700" text-anchor="start">冻结发布包</text>
+<text x="694" y="236" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">策略 + 归一化 + 配置</text>
+<path d="M942 223 H987" stroke="#1768b3" stroke-width="2.4" fill="none" marker-end="url(#arrow-1768b3)"/>
+<rect x="992" y="169" width="240" height="111" rx="16" fill="#e8f2fd" stroke="#1768b3" stroke-width="1.3"/>
+<text x="1010" y="203" font-size="22" fill="#1768b3" font-weight="700" text-anchor="start">导出一致性</text>
+<text x="1010" y="236" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">逐帧比较 / 固定版本</text>
+<text x="44" y="348" font-size="22" fill="#152d45" font-weight="700" text-anchor="start">部署侧：冻结策略持续运行，训练进程不进入控制回路</text>
+<rect x="528" y="369" width="218" height="87" rx="16" fill="#fff1d8" stroke="#9b6514" stroke-width="1.3"/>
+<text x="546" y="403" font-size="22" fill="#9b6514" font-weight="700" text-anchor="start">传统基线 / 保护</text>
+<text x="546" y="436" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">按平台独立验证</text>
+<path d="M637 456 V497" stroke="#9b6514" stroke-width="2.4" fill="none" marker-end="url(#arrow-9b6514)"/>
+<rect x="44" y="502" width="218" height="115" rx="16" fill="#e8f2fd" stroke="#1768b3" stroke-width="1.3"/>
+<text x="62" y="536" font-size="22" fill="#1768b3" font-weight="700" text-anchor="start">观测预处理</text>
+<text x="62" y="569" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">测量 / 状态估计</text>
+<path d="M262 558 H282" stroke="#1768b3" stroke-width="2.4" fill="none" marker-end="url(#arrow-1768b3)"/>
+<rect x="286" y="502" width="218" height="115" rx="16" fill="#e8f2fd" stroke="#1768b3" stroke-width="1.3"/>
+<text x="304" y="536" font-size="22" fill="#1768b3" font-weight="700" text-anchor="start">冻结策略</text>
+<text x="304" y="569" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">目标动作 / 偏移</text>
+<path d="M504 558 H524" stroke="#1768b3" stroke-width="2.4" fill="none" marker-end="url(#arrow-1768b3)"/>
+<rect x="528" y="502" width="218" height="115" rx="16" fill="#fff1d8" stroke="#9b6514" stroke-width="1.3"/>
+<text x="546" y="536" font-size="22" fill="#9b6514" font-weight="700" text-anchor="start">动作监督 / 切换</text>
+<text x="546" y="569" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">限幅 / 时序 / 日志</text>
+<path d="M746 558 H766" stroke="#087c70" stroke-width="2.4" fill="none" marker-end="url(#arrow-087c70)"/>
+<rect x="770" y="502" width="218" height="115" rx="16" fill="#e5f4ef" stroke="#087c70" stroke-width="1.3"/>
+<text x="788" y="536" font-size="22" fill="#087c70" font-weight="700" text-anchor="start">底层伺服</text>
+<text x="788" y="569" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">方位-RPM / 关节PD</text>
+<path d="M988 558 H1008" stroke="#087c70" stroke-width="2.4" fill="none" marker-end="url(#arrow-087c70)"/>
+<rect x="1012" y="502" width="218" height="115" rx="16" fill="#e5f4ef" stroke="#087c70" stroke-width="1.3"/>
+<text x="1030" y="536" font-size="22" fill="#087c70" font-weight="700" text-anchor="start">受控对象</text>
+<text x="1030" y="569" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">仿真器或实机</text>
+<path d="M1112 280 V302 H968 V480 H395 V498" stroke="#1768b3" stroke-width="2.4" fill="none" stroke-dasharray="7 5" marker-end="url(#arrow-1768b3)"/>
+<path d="M1121 617 V669 H153 V621" stroke="#087c70" stroke-width="2.4" fill="none" marker-end="url(#arrow-087c70)"/>
+<text x="475" y="659" font-size="19" fill="#087c70" font-weight="700" text-anchor="start">传感反馈 / 下一时刻观测</text>
+<rect x="44" y="711" width="1186" height="87" rx="14" fill="#ffffff" stroke="#aac0d1"/>
+<text x="64" y="744" font-size="19" fill="#18354e" font-weight="400" text-anchor="start">船舶：传统基线先分配到目标方位角与 RPM，再与 RL 在同一动作层切换。</text>
+<text x="64" y="776" font-size="19" fill="#18354e" font-weight="400" text-anchor="start">人形：动作转关节目标，底层 PD 执行；保护姿态、停机与接管规则按平台重新验证。</text>
+<text x="36" y="826" font-size="15" fill="#526c80" font-weight="400" text-anchor="start">SHIP → HUMANOID  /  实施计划 v0.3  /  周次与门槛均为计划建议</text>
+</g>
+</svg>

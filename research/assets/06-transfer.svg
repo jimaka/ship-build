@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="832" viewBox="0 0 1280 832" role="img" aria-labelledby="title desc">
+<title id="title">图 6-4  从船舶到人形：复用方法，重建物理与任务</title>
+<desc id="desc">五条工程能力从船舶映射到人形机器人：执行器分层、随机化、状态观测、训练评估、部署诊断。物理模型、策略权重、奖励和保护边界需要重新建立。</desc>
+<defs>
+<marker id="arrow-1768b3" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0 L8 4 L0 8 Z" fill="#1768b3"/>
+</marker>
+<marker id="arrow-087c70" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0 L8 4 L0 8 Z" fill="#087c70"/>
+</marker>
+<marker id="arrow-9b6514" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0 L8 4 L0 8 Z" fill="#9b6514"/>
+</marker>
+<marker id="arrow-7254a8" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0 L8 4 L0 8 Z" fill="#7254a8"/>
+</marker>
+</defs>
+<rect width="1280" height="832" rx="22" fill="#f5f8fc"/>
+<g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="0" y="0" width="1280" height="106" rx="22" fill="#152d45"/>
+<text x="36" y="46" font-size="29" fill="#ffffff" font-weight="700" text-anchor="start">图 6-4  从船舶到人形：复用方法，重建物理与任务</text>
+<text x="36" y="80" font-size="17" fill="#c6d9e8" font-weight="400" text-anchor="start">中央列是可复用资产  ·  两侧模型与策略分别建立  ·  图中没有假定权重可以直接迁移</text>
+<text x="44" y="150" font-size="24" fill="#1768b3" font-weight="700" text-anchor="start">船舶实践</text>
+<text x="481" y="150" font-size="24" fill="#152d45" font-weight="700" text-anchor="start">复用的工程能力</text>
+<text x="945" y="150" font-size="24" fill="#7254a8" font-weight="700" text-anchor="start">人形控制</text>
+<rect x="44" y="176" width="334" height="65" rx="12" fill="#e8f2fd"/>
+<rect x="438" y="176" width="398" height="65" rx="12" fill="#ffffff" stroke="#aac0d1"/>
+<rect x="896" y="176" width="334" height="65" rx="12" fill="#f0eafa"/>
+<text x="63" y="216" font-size="20" fill="#1768b3" font-weight="400" text-anchor="start">推进器目标与反馈</text>
+<text x="637" y="216" font-size="20" fill="#152d45" font-weight="700" text-anchor="middle">动作与执行器分层</text>
+<text x="914" y="216" font-size="20" fill="#7254a8" font-weight="400" text-anchor="start">关节目标 / PD / 电机</text>
+<path d="M383 208 H433" stroke="#1768b3" stroke-width="2.4" fill="none" marker-end="url(#arrow-1768b3)"/>
+<path d="M841 208 H891" stroke="#7254a8" stroke-width="2.4" fill="none" marker-end="url(#arrow-7254a8)"/>
+<rect x="44" y="262" width="334" height="65" rx="12" fill="#e8f2fd"/>
+<rect x="438" y="262" width="398" height="65" rx="12" fill="#ffffff" stroke="#aac0d1"/>
+<rect x="896" y="262" width="334" height="65" rx="12" fill="#f0eafa"/>
+<text x="63" y="302" font-size="20" fill="#1768b3" font-weight="400" text-anchor="start">风流、推力偏差、时延</text>
+<text x="637" y="302" font-size="20" fill="#152d45" font-weight="700" text-anchor="middle">校准与域随机化</text>
+<text x="914" y="302" font-size="20" fill="#7254a8" font-weight="400" text-anchor="start">摩擦、质量、推扰</text>
+<path d="M383 294 H433" stroke="#1768b3" stroke-width="2.4" fill="none" marker-end="url(#arrow-1768b3)"/>
+<path d="M841 294 H891" stroke="#7254a8" stroke-width="2.4" fill="none" marker-end="url(#arrow-7254a8)"/>
+<rect x="44" y="348" width="334" height="65" rx="12" fill="#e8f2fd"/>
+<rect x="438" y="348" width="398" height="65" rx="12" fill="#ffffff" stroke="#aac0d1"/>
+<rect x="896" y="348" width="334" height="65" rx="12" fill="#f0eafa"/>
+<text x="63" y="388" font-size="20" fill="#1768b3" font-weight="400" text-anchor="start">位置、艏向、速度估计</text>
+<text x="637" y="388" font-size="20" fill="#152d45" font-weight="700" text-anchor="middle">观测管线与历史信息</text>
+<text x="914" y="388" font-size="20" fill="#7254a8" font-weight="400" text-anchor="start">IMU、关节、基座估计</text>
+<path d="M383 380 H433" stroke="#1768b3" stroke-width="2.4" fill="none" marker-end="url(#arrow-1768b3)"/>
+<path d="M841 380 H891" stroke="#7254a8" stroke-width="2.4" fill="none" marker-end="url(#arrow-7254a8)"/>
+<rect x="44" y="434" width="334" height="65" rx="12" fill="#e8f2fd"/>
+<rect x="438" y="434" width="398" height="65" rx="12" fill="#ffffff" stroke="#aac0d1"/>
+<rect x="896" y="434" width="334" height="65" rx="12" fill="#f0eafa"/>
+<text x="63" y="474" font-size="20" fill="#1768b3" font-weight="400" text-anchor="start">船模 + PPO + 场景</text>
+<text x="637" y="474" font-size="20" fill="#152d45" font-weight="700" text-anchor="middle">训练、评估与版本管理</text>
+<text x="914" y="474" font-size="20" fill="#7254a8" font-weight="400" text-anchor="start">机器人模型 + PPO</text>
+<path d="M383 466 H433" stroke="#1768b3" stroke-width="2.4" fill="none" marker-end="url(#arrow-1768b3)"/>
+<path d="M841 466 H891" stroke="#7254a8" stroke-width="2.4" fill="none" marker-end="url(#arrow-7254a8)"/>
+<rect x="44" y="520" width="334" height="65" rx="12" fill="#e8f2fd"/>
+<rect x="438" y="520" width="398" height="65" rx="12" fill="#ffffff" stroke="#aac0d1"/>
+<rect x="896" y="520" width="334" height="65" rx="12" fill="#f0eafa"/>
+<text x="63" y="560" font-size="20" fill="#1768b3" font-weight="400" text-anchor="start">导出、回放、异常处理</text>
+<text x="637" y="560" font-size="20" fill="#152d45" font-weight="700" text-anchor="middle">部署一致性与故障诊断</text>
+<text x="914" y="560" font-size="20" fill="#7254a8" font-weight="400" text-anchor="start">跨仿真器与实机演练</text>
+<path d="M383 552 H433" stroke="#1768b3" stroke-width="2.4" fill="none" marker-end="url(#arrow-1768b3)"/>
+<path d="M841 552 H891" stroke="#7254a8" stroke-width="2.4" fill="none" marker-end="url(#arrow-7254a8)"/>
+<rect x="44" y="641" width="570" height="141" rx="16" fill="#e5f4ef" stroke="#087c70" stroke-width="1.3"/>
+<text x="62" y="675" font-size="22" fill="#087c70" font-weight="700" text-anchor="start">按设备重建</text>
+<text x="62" y="708" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">动力学、接触、状态估计、动作维度与控制周期</text>
+<text x="62" y="737" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">奖励尺度、随机化分布、OOD 阈值和保护动作</text>
+<rect x="644" y="641" width="586" height="141" rx="16" fill="#fff1d8" stroke="#9b6514" stroke-width="1.3"/>
+<text x="662" y="675" font-size="22" fill="#9b6514" font-weight="700" text-anchor="start">能力迁移的边界</text>
+<text x="662" y="708" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">船舶权重不直接搬到机器人；策略重新训练</text>
+<text x="662" y="737" font-size="18" fill="#18354e" font-weight="400" text-anchor="start">重点补课：浮动基座、接触摩擦、步态与全身协调</text>
+<text x="36" y="812" font-size="15" fill="#526c80" font-weight="400" text-anchor="start">SHIP → HUMANOID  /  实施计划 v0.3  /  周次与门槛均为计划建议</text>
+</g>
+</svg>
